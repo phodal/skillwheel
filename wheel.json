@@ -6,7 +6,7 @@
         "name": "基础",
         "children": [
           {
-            "name": "HTML / CSS"
+            "name": "HTML、CSS"
           },
           {
             "name": "JavaScript"
@@ -38,13 +38,13 @@
             "name": "Node.js"
           },
           {
-            "name": "DIV / CSS"
+            "name": "DIV、CSS"
           },
           {
-            "name": "SCSS / SASS "
+            "name": "SCSS、SASS "
           },
           {
-            "name": "矢量图形 / 矢量图形动画（如SVG）"
+            "name": "矢量图形、矢量图形动画（如SVG）"
           },
           {
             "name": "单页面应用"
@@ -55,7 +55,7 @@
         "name": "高级篇",
         "children": [
           {
-            "name": "ES6 / TypeScript "
+            "name": "ES6、TypeScript "
           },
           {
             "name": "CSS3"
@@ -67,7 +67,7 @@
             "name": "函数式编程"
           },
           {
-            "name": "MVC / MVVM / MV*"
+            "name": "MVC、MVVM、MV*"
           },
           {
             "name": "安全性（如跨域）"
@@ -81,7 +81,7 @@
         "name": "工程化",
         "children": [
           {
-            "name": "代码质量（如JSLint / ESLint / TSLint / CSLint）"
+            "name": "代码质量（如JSLint、ESLint、TSLint、CSLint）"
           },
           {
             "name": "代码分析（如Code Climate）"
@@ -118,7 +118,7 @@
         "name": "前端特定",
         "children": [
           {
-            "name": "CSS / CSS3 动画"
+            "name": "CSS、CSS3 动画"
           },
           {
             "name": "JavaScript 动画"
@@ -170,7 +170,7 @@
             "name": "Debug工具"
           },
           {
-            "name": "Wireshark / Charles抓包"
+            "name": "Wireshark、Charles抓包"
           },
           {
             "name": "远程设备调试（如Chrome Inspect Devices）"
@@ -198,7 +198,7 @@
         "name": "性能与优化",
         "children": [
           {
-            "name": "PageSpeed / Yslow 优化"
+            "name": "PageSpeed、Yslow 优化"
           },
           {
             "name": "加载优化（如gzip压缩、缓存等等）"
@@ -244,7 +244,7 @@
             "name": "内部链接建设"
           },
           {
-            "name": "MicroData / MicroFormat"
+            "name": "MicroData、MicroFormat"
           },
           {
             "name": "页面静态内容生成"
@@ -269,7 +269,7 @@
         "name": "入门",
         "children": [
           {
-            "name": "HTML / CSS"
+            "name": "HTML、CSS"
           },
           {
             "name": "HTTP协议基础"
@@ -298,7 +298,7 @@
             "name": "API设计"
           },
           {
-            "name": "网络通信协议，如TCP / Socket"
+            "name": "网络通信协议，如TCP、Socket"
           }
         ]
       },
@@ -432,7 +432,7 @@
             "name": "加密算法"
           },
           {
-            "name": "XSS/CSRF/SQL注入"
+            "name": "XSS、CSRF、SQL注入"
           }
         ]
       },
@@ -564,7 +564,7 @@
         "name": "网络",
         "children": [
           {
-            "name": "CCNP / CCNA    "
+            "name": "CCNP、CCNA    "
           }
         ]
       },
@@ -647,7 +647,7 @@
     "name": "软技能图谱",
     "children": [
       {
-        "name": "影响力 / 个人品牌",
+        "name": "影响力、个人品牌",
         "children": [
           {
             "name": "写作"
