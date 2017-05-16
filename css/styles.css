@@ -1,0 +1,659 @@
+body {
+    font-size: 1em;
+    font-weight: 400;
+    word-spacing: normal;
+    letter-spacing: normal;
+    text-transform: none;
+    font-family: Verdana, Myriad Web, Syntax, sans-serif;
+    font-size-adjust: .58;
+    color: #000;
+    background: #FFF;
+    line-height: 1.58em;
+    border-width: 0;
+    width: auto;
+    margin: 1.58em 5% 1.58em 8%;
+    padding: 0
+}
+
+/* sunburst css */
+#sunburst {
+    font-family: Arial, Verdana, Courier New, monospace;
+    font-size: .6em; /* text heigh of sunburst text */
+    font-weight: 400
+}
+
+/* image is swapped in js to svg */
+svg {
+    /* center the sunburst graph */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tooltip {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    padding: 10px;
+    background-color: white;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    -mox-box-shadow: 4px 4px 4px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 4px 4px 10px rbga(0, 0, 0, 0.4);
+    pointer-events: none;
+}
+
+#tooltip.hidden {
+    opacity: 0;
+}
+
+#tooltip p {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+small {
+    font-size: .92em
+}
+
+big {
+    font-size: 1.17em
+}
+
+pre {
+    font-family: Verdana, Monotype, Courier New, monospace;
+    border-top: 0;
+    border-bottom: 0;
+    line-height: 1.25em;
+    border-left: 0;
+    border-right: 0;
+    margin: .75em 0;
+    padding: 0
+}
+
+ol li {
+    list-style-type: decimal
+}
+
+ol ol li {
+    list-style-type: lower-alpha
+}
+
+ol ol ol li {
+    list-style-type: lower-roman
+}
+
+table, tbody, tr, td {
+    font-size: 1em;
+    word-spacing: normal;
+    letter-spacing: normal;
+    text-transform: none;
+    font-family: Verdana, Myriad Web, Syntax, sans-serif;
+    font-size-adjust: .58
+}
+
+h1 {
+    font-family: Myriad Web, Arial, Helvetica, sans-serif;
+    font-size-adjust: .48;
+    font-size: 2em;
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    word-spacing: normal;
+    letter-spacing: normal;
+    text-transform: none;
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    text-align: left;
+    margin: 1.33em 0 .33em;
+    padding: 0
+}
+
+h2 {
+    font-family: Myriad Web, Arial, Helvetica, sans-serif;
+    font-size-adjust: .48;
+    font-size: 1.75em;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    word-spacing: normal;
+    letter-spacing: normal;
+    text-transform: none;
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    text-align: left;
+    margin: 1.75em 0 .33em;
+    padding: 0
+}
+
+h3 {
+    font-family: Myriad Web, Arial, Helvetica, sans-serif;
+    font-size-adjust: .48;
+    font-size: 1.58em;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    word-spacing: normal;
+    letter-spacing: normal;
+    text-transform: none;
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    text-align: left;
+    margin: 1.58em 0 .33em;
+    padding: 0
+}
+
+h4 {
+    font-family: Myriad Web, Arial, Helvetica, sans-serif;
+    font-size-adjust: .48;
+    font-size: 1.33em;
+    font-weight: 500;
+    font-style: oblique;
+    text-decoration: none;
+    word-spacing: normal;
+    letter-spacing: normal;
+    text-transform: none;
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    text-align: left;
+    margin: 1.33em 0 .33em;
+    padding: 0
+}
+
+h5, dt {
+    font-family: Myriad Web, Arial, Helvetica, sans-serif;
+    font-size-adjust: .48;
+    font-size: 1.17em;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    word-spacing: normal;
+    letter-spacing: normal;
+    text-transform: none
+}
+
+h6 {
+    font-family: Myriad Web, Arial, Helvetica, sans-serif;
+    font-size-adjust: .48;
+    font-size: 1em;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    word-spacing: normal;
+    letter-spacing: normal;
+    text-transform: none;
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    text-align: left;
+    margin: 1em 0 .33em;
+    padding: 0
+}
+
+tfoot, thead {
+    font-size: 1em;
+    word-spacing: normal;
+    letter-spacing: normal;
+    text-transform: none;
+    font-family: Myriad Web, Arial, Helvetica, sans-serif;
+    font-size-adjust: .48
+}
+
+th {
+    vertical-align: baseline;
+    font-size: 1em;
+    font-weight: 700;
+    word-spacing: normal;
+    letter-spacing: normal;
+    text-transform: none;
+    font-family: Myriad Web, Arial, Helvetica, sans-serif;
+    font-size-adjust: .48;
+    text-align: left
+}
+
+hr {
+    visibility: visible;
+    color: #000;
+    border-top: 0;
+    border-bottom: 0;
+    height: 1px;
+    border-left: 0;
+    border-right: 0;
+    text-align: left;
+    width: 100%;
+    margin: .75em 0;
+    padding: 0
+}
+
+a, address, blockquote, body, cite, code, dd, del, dfn, div, dl, dt, form, h1, h2, h3, h4, h5, h6, iframe, img, kbd, li, object, ol, p, q, samp, small, span, strong, ul, var, applet, big, center, dir, font, hr, menu, pre, abbr, acronym, bdo, button, fieldset, ins, label {
+    word-spacing: normal;
+    letter-spacing: normal;
+    text-transform: none;
+    text-decoration: none;
+    border-color: #000;
+    border-style: none
+}
+
+strong {
+    font-style: italic;
+    background: #FFF;
+    font-weight: 700;
+    color: #000
+}
+
+em strong, strong em {
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: bolder;
+    background: #FFF;
+    color: red
+}
+
+b {
+    font-weight: 700
+}
+
+.warning {
+    text-transform: none;
+    font-style: normal;
+    font-weight: bolder;
+    background: #FFF;
+    color: red
+}
+
+del {
+    text-decoration: line-through;
+    background: #F66
+}
+
+ins {
+    text-decoration: underline;
+    background: #FF0
+}
+
+address {
+    font-style: normal;
+    letter-spacing: .1em;
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    margin: 1.58em 0;
+    padding: 0
+}
+
+acronym {
+    font-variant: small-caps;
+    letter-spacing: .1em
+}
+
+h1, h2, h3, h4, h5, h6, dt, th, thead, tfoot {
+    color: #000;
+    background: #FFF
+}
+
+#colophon {
+    display: none
+}
+
+col, colgroup, table, tbody, td, tr {
+    color: #000;
+    text-decoration: none;
+    background: #FFF;
+    border-color: #000;
+    border-style: none
+}
+
+a, address, blockquote, cite, code, dd, del, dfn, div, dl, dt, em, form, h1, h2, h3, h4, h5, h6, iframe, img, kbd, li, object, ol, p, q, samp, small, span, strong, ul, var, applet, b, big, center, dir, font, hr, i, menu, pre, s, strike, tt, u, abbr, acronym, bdo, button, fieldset, ins, label {
+    border-top: 0;
+    border-bottom: 0;
+    vertical-align: baseline;
+    border-left: 0;
+    border-right: 0;
+    text-align: left;
+    float: none;
+    clear: none;
+    list-style-position: outside;
+    margin: 0;
+    padding: 0
+}
+
+h5 {
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    text-align: left;
+    margin: 1.17em 0 .33em;
+    padding: 0
+}
+
+p {
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    text-indent: 0;
+    margin: .75em 0;
+    padding: 0
+}
+
+dd {
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    margin: 0 0 .75em 1.58em;
+    padding: 0
+}
+
+li {
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    margin: 0 0 0 3.16em;
+    padding: 0
+}
+
+div, center {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top: 0;
+    border-bottom: 0
+}
+
+.stb {
+    margin-top: 2.17em;
+    margin-bottom: .75em;
+    padding-top: 2.17em;
+    padding-bottom: 0;
+    border-top: 0;
+    border-bottom: 0;
+    border-style: solid
+}
+
+.mtb {
+    margin-top: 3.08em;
+    margin-bottom: .75em;
+    padding-top: 3.08em;
+    padding-bottom: 0;
+    border-top: .1em;
+    border-bottom: 0;
+    border-style: solid
+}
+
+.ltb {
+    margin-top: 4.34em;
+    margin-bottom: .75em;
+    padding-top: 4.34em;
+    padding-bottom: 0;
+    border-top: .25em;
+    border-bottom: 0;
+    border-style: solid
+}
+
+col, colgroup, table, tbody, td, tfoot, th, thead, tr {
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    float: none;
+    clear: none;
+    margin: 0;
+    padding: 0
+}
+
+address, blockquote, dl, fieldset, form, ol, p, ul, dir, hr, menu, pre {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border-left: 0;
+    border-right: 0
+}
+
+blockquote {
+    margin-left: 1.58em;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border-left: 0;
+    border-right: 0
+}
+
+center {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border-left: 0;
+    border-right: 0;
+    text-align: left
+}
+
+i, var, cite, dfn, .note {
+    font-style: italic
+}
+
+div > p:first-child, body > p:first-child, td > p:first-child, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p, div + p, p.initial {
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    text-align: left;
+    text-indent: 0;
+    margin: .75em 0;
+    padding: 0
+}
+
+h1, h2, h3, h4, h5, h6, td, th {
+    line-height: 1.33em
+}
+
+blockquote, fieldset, form, ul, ol, dl, dir, menu, .subhead {
+    margin-top: .75em;
+    margin-bottom: .75em;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top: 0;
+    border-bottom: 0
+}
+
+dt, ul ul, ol ol, li address, li dl, li ol, li p, li ul, li dir, li hr, li menu, li pre, li h1, li h2, li h3, li h4, li h5, li h6, dd address, dd dl, dd ol, dd p, dd ul, dd dir, dd hr, dd menu, dd pre, dd h1, dd h2, dd h3, dd h4, dd h5, dd h6 {
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    margin: 0;
+    padding: 0
+}
+
+table, td, caption {
+    text-align: left
+}
+
+#adsense {
+    margin-top: 1em;
+}
+
+path {
+    stroke: #000;
+    stroke-width: 1.5;
+    cursor: pointer;
+}
+
+text {
+    font: 11px sans-serif;
+    cursor: pointer;
+}
+
+body {
+    width: 880px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin: .5em 0;
+}
+
+p#intro {
+    text-align: center;
+    margin: 1em 0;
+}
+
+div.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 60px;
+    height: 28px;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+.github-btn {
+    height: 20px;
+    overflow: hidden;
+    float: left;
+    position: absolute;
+    left: 100px;
+}
+
+.gh-btn, .gh-count, .gh-ico {
+    float: left
+}
+
+.gh-btn, .gh-count {
+    padding: 2px 5px 2px 4px;
+    color: #333;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #fff;
+    white-space: nowrap;
+    cursor: pointer;
+    border-radius: 3px
+}
+
+.gh-btn {
+    background-color: #eee;
+    background-image: -moz-linear-gradient(#fcfcfc, #eee);
+    background-image: -webkit-linear-gradient(#fcfcfc, #eee);
+    background-image: linear-gradient(#fcfcfc, #eee);
+    background-repeat: no-repeat;
+    border: 1px solid #d5d5d5
+}
+
+.gh-btn:focus, .gh-btn:hover {
+    text-decoration: none;
+    background-color: #ddd;
+    background-image: -moz-linear-gradient(#eee, #ddd);
+    background-image: -webkit-linear-gradient(#eee, #ddd);
+    background-image: linear-gradient(#eee, #ddd);
+    border-color: #ccc
+}
+
+.gh-btn:active {
+    background-image: none;
+    background-color: #dcdcdc;
+    border-color: #b5b5b5;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, .15)
+}
+
+.gh-ico {
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNDBweCIgaGVpZ2h0PSI0MHB4IiB2aWV3Qm94PSIxMiAxMiA0MCA0MCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAxMiAxMiA0MCA0MCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cGF0aCBmaWxsPSIjMzMzMzMzIiBkPSJNMzIsMTMuNGMtMTAuNSwwLTE5LDguNS0xOSwxOWMwLDguNCw1LjUsMTUuNSwxMywxOGMxLDAuMiwxLjMtMC40LDEuMy0wLjljMC0wLjUsMC0xLjcsMC0zLjINCgljLTUuMywxLjEtNi40LTIuNi02LjQtMi42QzIwLDQxLjYsMTguOCw0MSwxOC44LDQxYy0xLjctMS4yLDAuMS0xLjEsMC4xLTEuMWMxLjksMC4xLDIuOSwyLDIuOSwyYzEuNywyLjksNC41LDIuMSw1LjUsMS42DQoJYzAuMi0xLjIsMC43LTIuMSwxLjItMi42Yy00LjItMC41LTguNy0yLjEtOC43LTkuNGMwLTIuMSwwLjctMy43LDItNS4xYy0wLjItMC41LTAuOC0yLjQsMC4yLTVjMCwwLDEuNi0wLjUsNS4yLDINCgljMS41LTAuNCwzLjEtMC43LDQuOC0wLjdjMS42LDAsMy4zLDAuMiw0LjcsMC43YzMuNi0yLjQsNS4yLTIsNS4yLTJjMSwyLjYsMC40LDQuNiwwLjIsNWMxLjIsMS4zLDIsMywyLDUuMWMwLDcuMy00LjUsOC45LTguNyw5LjQNCgljMC43LDAuNiwxLjMsMS43LDEuMywzLjVjMCwyLjYsMCw0LjYsMCw1LjJjMCwwLjUsMC40LDEuMSwxLjMsMC45YzcuNS0yLjYsMTMtOS43LDEzLTE4LjFDNTEsMjEuOSw0Mi41LDEzLjQsMzIsMTMuNHoiLz4NCjwvc3ZnPg0K);
+    background-size: 100% 100%;
+    background-repeat: no-repeat
+}
+
+.gh-count {
+    position: relative;
+    display: none;
+    margin-left: 4px;
+    background-color: #fafafa;
+    border: 1px solid #d4d4d4
+}
+
+.gh-count:focus, .gh-count:hover {
+    color: #4183C4
+}
+
+.gh-count:after, .gh-count:before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid
+}
+
+.gh-count:before {
+    top: 50%;
+    left: -3px;
+    margin-top: -4px;
+    border-width: 4px 4px 4px 0;
+    border-right-color: #fafafa
+}
+
+.gh-count:after {
+    top: 50%;
+    left: -4px;
+    z-index: -1;
+    margin-top: -5px;
+    border-width: 5px 5px 5px 0;
+    border-right-color: #d4d4d4
+}
+
+.github-btn-large {
+    height: 30px
+}
+
+.github-btn-large .gh-btn, .github-btn-large .gh-count {
+    padding: 3px 10px 3px 8px;
+    font-size: 16px;
+    line-height: 22px;
+    border-radius: 4px
+}
+
+.github-btn-large .gh-ico {
+    width: 20px;
+    height: 20px
+}
+
+.github-btn-large .gh-count {
+    margin-left: 6px
+}
+
+.github-btn-large .gh-count:before {
+    left: -5px;
+    margin-top: -6px;
+    border-width: 6px 6px 6px 0
+}
+
+.github-btn-large .gh-count:after {
+    left: -6px;
+    margin-top: -7px;
+    border-width: 7px 7px 7px 0
+}
