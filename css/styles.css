@@ -660,3 +660,12 @@ div.tooltip {
     position: absolute;
     left: 100px;
 }
+
+h3 {
+    text-align: center;
+}
+
+.qrcode {
+    width: 258px;
+    margin: 0 auto;
+}
