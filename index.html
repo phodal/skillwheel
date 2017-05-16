@@ -51,6 +51,11 @@
       .on("click", click)
       .append("title")
       .text(function(d) { return d.data.name + "\n" + formatNumber(d.value); });
+
+    svg.selectAll("title")
+      .attr("transform", function (d) {
+        console.log(d)
+      });
   });
 
   function click(d) {

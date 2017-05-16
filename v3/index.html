@@ -5,8 +5,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="http://d3js.org/d3.v3.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../js/d3.v3.min.js"></script>
+    <script src="./randomColor.js"></script>
     <style>
         body {
             font-size: 1em;
@@ -19,10 +19,7 @@
             color: #000;
             background: #FFF;
             line-height: 1.58em;
-            border-top: 0;
-            border-left: 0;
-            border-bottom: 0;
-            border-right: 0;
+            border-width: 0;
             width: auto;
             margin: 1.58em 5% 1.58em 8%;
             padding: 0
@@ -54,7 +51,7 @@
             border-radius: 10px;
             -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
             -mox-box-shadow: 4px 4px 4px 10px rgba(0, 0, 0, 0.4);
-            box-shadow: 4px 4px 10px rbga(0, 0, 0, 0.4)
+            box-shadow: 4px 4px 10px rbga(0, 0, 0, 0.4);
             pointer-events: none;
         }
 
@@ -78,7 +75,7 @@
         }
 
         pre {
-            font-family: Verdana, Monotype . com, Courier New, monospace;
+            font-family: Verdana, Monotype, Courier New, monospace;
             border-top: 0;
             border-bottom: 0;
             line-height: 1.25em;
@@ -537,6 +534,7 @@
 
         #adsense {
             margin-top: 1em;
+        }
 
         path {
             stroke: #000;
@@ -701,27 +699,6 @@
         .style("opacity", 0.3);
     }
 
-    // Then highlight only those that are an ancestor of the current segment.
-    var sequenceArray = getAncestors(d);
-
-    // Given a node in a partition layout, return an array of all of its ancestor
-    // nodes, highest first, but excluding the root.
-    function getAncestors(node) {
-      var path = [];
-      var current = node;
-      while (current.parent) {
-        path.unshift(current);
-        current = current.parent;
-      }
-      return path;
-    }
-
-    vis.selectAll("path")
-      .filter(function (node) {
-        return (sequenceArray.indexOf(node) >= 0);
-      })
-      .style("opacity", 1);
-
     function click(d) {
       path.transition()
         .duration(duration)
@@ -774,7 +751,7 @@
       // L*a*b* might be better here...
       return d3.hsl((a.h + b.h) / 2, a.s * 1.2, a.l / 1.2);
     }
-    return d.colour || "#fff";
+    return d.colour || randomColor();
   }
 
   // Interpolate the scales!
