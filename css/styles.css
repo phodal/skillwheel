@@ -535,8 +535,6 @@ div.tooltip {
     height: 20px;
     overflow: hidden;
     float: left;
-    position: absolute;
-    left: 100px;
 }
 
 .gh-btn, .gh-count, .gh-ico {
@@ -656,4 +654,9 @@ div.tooltip {
     left: -6px;
     margin-top: -7px;
     border-width: 7px 7px 7px 0
+}
+
+.github-info {
+    position: absolute;
+    left: 100px;
 }
