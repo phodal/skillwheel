@@ -90,7 +90,6 @@ The Part of [Growth Plan](https://github.com/phodal/growth)，由Phodal整理和
    * 页面静态内容生成
    * H1、H2、H3和strong使用
    * Title、Description优化
-   * 页面静态内容生成
 
 
 后台技能图谱
